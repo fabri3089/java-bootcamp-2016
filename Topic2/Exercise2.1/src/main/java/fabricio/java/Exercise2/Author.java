@@ -4,10 +4,11 @@ public class Author {
 	private String nameAuthor;
 	private String message;
 	public Author(String nameAuthor, String message) {
-		// TODO Auto-generated constructor stub
+		this.nameAuthor=nameAuthor;
+                this.message=message;
 	}
 	public Author() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	public String getNameAuthor() {
 		return nameAuthor;
