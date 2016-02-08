@@ -57,6 +57,19 @@ public class ShoppCartController {
 		    }
 		    
 		  }
+	
+	@RequestMapping("/deleteUser")
+	  @ResponseBody
+	  public String deleteUser(Long id) {
+	    try {
+	      User user = userRepository.findById(id);
+	      userRepository.delete(user);
+	    }
+	    catch (Exception ex) {
+	      return "Error deleting the user";
+	    }
+	    return "User succesfully deleted!";
+	  }
 	@RequestMapping("/findProductsByName")
 	  @ResponseBody
 	  public String findProductsByName(String name) {
